@@ -1,9 +1,7 @@
 <template>
     <div id="app">
       <h1>Items</h1>
-      <ul>
-        <li v-for="item in items" :key="item._id">{{ item.name }} - {{ item.description }}</li>
-      </ul>
+      
   
       <form @submit.prevent="addItem">
         <input v-model="newItem.name" placeholder="Item name" required />
@@ -32,7 +30,7 @@
     methods: {
       fetchItems() {
         axios
-          .get('http://localhost:3000/api/items')
+          .get('http://localhost:5000/api/items')
           .then(response => {
             this.items = response.data;
           })
@@ -42,7 +40,7 @@
       },
       addItem() {
         axios
-          .post('http://localhost:3000/api/items', this.newItem)
+          .post('http://localhost:5000/api/items', this.newItem)
           .then(response => {
             this.items.push(response.data); // เพิ่มข้อมูลใหม่ในรายการที่แสดง
             this.newItem.name = '';

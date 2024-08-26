@@ -39,7 +39,7 @@
           <v-card class="mb-6 pa-4" outlined>
             <v-card-title class="text-h5">ข้อมูลผู้รับ</v-card-title>
             <v-select
-              v-model="formData.name_destination"
+                x
               :items="[
                 { text: 'teacher1', value: '1' },
                 { text: 'teacher2', value: '2' },
