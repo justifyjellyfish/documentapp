@@ -37,7 +37,7 @@ const router = useRouter();
               block
               x-large
               color="pink lighten-4"
-              @click="$router.push('/DashboardPage')"
+              @click="$router.push('/LineLoginPage')"
             >
               LOGIN WITH LINE
             </v-btn>

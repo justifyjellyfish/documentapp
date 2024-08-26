@@ -41,17 +41,6 @@
           </v-list-item>
         </v-list>
       </v-card>
-  
-      <v-btn
-        fab
-        color="primary"
-        fixed
-        bottom
-        right
-        @click="$router.push('./untrack')"
-      >
-        <v-icon>mdi-plus</v-icon>
-      </v-btn>
     </v-container>
   </template>
   
@@ -69,13 +58,13 @@ export default {
     const initializeLiff = async () => {
       try {
         await liff.init({ liffId: '2005937488-5q2Kd2lk' });
-        if (!liff.isLoggedIn()) {
-          liff.login();
-        } else {
-          const profile = await liff.getProfile();
-          lineName.value = profile.displayName;
-          lineUID.value = profile.userId;
-        }
+        // if (!liff.isLoggedIn()) {
+        //   liff.login();
+        // } else {
+        //   const profile = await liff.getProfile();
+        //   lineName.value = profile.displayName;
+        //   lineUID.value = profile.userId;
+        // }
       } catch (error) {
         console.error('LIFF initialization failed', error);
       }
