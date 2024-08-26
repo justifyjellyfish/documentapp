@@ -41,6 +41,14 @@ const router = useRouter();
             >
               LOGIN WITH LINE
             </v-btn>
+            <v-btn
+              block
+              x-large
+              color="pink lighten-4"
+              @click="$router.push('/ApiTestingPage')"
+            >
+              API TESTING
+            </v-btn>
           </v-card>
         </v-col>
       </v-row>

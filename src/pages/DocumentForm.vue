@@ -127,10 +127,28 @@ export default {
     const dateMenu = ref(false)
     const urgentDateMenu = ref(false)
 
-    function submit() {
-      // Implement your submit logic here
-      console.log('Form submitted:', formData.value)
+    async function submit() {
+  try {
+    const response = await fetch('http://localhost:5000/api/documents', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData.value),
+    });
+    
+    if (response.ok) {
+      console.log('Document submitted successfully');
+      // Reset form or navigate to a success page
+    } else {
+      console.error('Failed to submit document');
     }
+  } catch (error) {
+    console.error('Error submitting document:', error);
+  }
+}
+
+console.log('Submitting form data:', formData.value);
 
     function navigateToLiff() {
       // Implement navigation logic here
