@@ -1,8 +1,14 @@
 <template>
     <div id="app">
       <h1>Items</h1>
-      
-  
+      <div>
+      <ul>
+        <li v-for="item in items" :key="item._id">
+          <strong>{{ item.name }}</strong>: {{ item.description }}
+        </li>
+      </ul>
+      </div>
+
       <form @submit.prevent="addItem">
         <input v-model="newItem.name" placeholder="Item name" required />
         <input v-model="newItem.description" placeholder="Item description" required />
