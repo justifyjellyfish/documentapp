@@ -45,9 +45,17 @@ const router = useRouter();
               block
               x-large
               color="pink lighten-4"
-              @click="$router.push('/ApiTestingPage')"
+              @click="$router.push('/LineHowToPage')"
             >
-              API TESTING
+              Line how to
+            </v-btn>
+            <v-btn
+              block
+              x-large
+              color="pink lighten-4"
+              @click="$router.push('/RegisterPage')"
+            >
+              Register
             </v-btn>
           </v-card>
         </v-col>
